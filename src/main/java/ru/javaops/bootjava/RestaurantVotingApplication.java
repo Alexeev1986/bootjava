@@ -19,5 +19,7 @@ public class RestaurantVotingApplication implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) {
         System.out.println(userRepository.findByLastNameContainingIgnoreCase("last"));
+        System.out.println("Users with email - user@gmail.com : ");
+        System.out.println(userRepository.findByEmailIgnoreCase("user@gmail.com"));
     }
 }
